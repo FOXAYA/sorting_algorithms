@@ -4,31 +4,23 @@
  * of integers in ascending order using the Insertion sort algorithm
  * @list: Dobule linked list to sort
  */
-
 void insertion_sort_list(listint_t **list)
 {
-    listint_t *node;
+	listint_t *node;
 
-    if (list == NULL || (*list)->next == NULL)
-        return;
-
-    node = (*list)->next;
-
-    do
-    {
-        do
-        {
-            if (node->prev && node->prev->n > node->n)
-            {
-                node = swap_node(node, list);
-                print_list(*list);
-            }
-        } while (node->prev);
-
-        node = node->next;
-    } while (node);
+	if (list == NULL || (*list)->next == NULL)
+		return;
+	node = (*list)->next;
+	while (node)
+	{
+		while ((node->prev) && (node->prev->n > node->n))
+		{
+			node = swap_node(node, list);
+			print_list(*list);
+		}
+		node = node->next;
+	}
 }
-
 /**
  *swap_node - swap a node for his previous one
  *@node: node
@@ -52,4 +44,3 @@ listint_t *swap_node(listint_t *node, listint_t **list)
 		*list = current;
 	return (current);
 }
-
