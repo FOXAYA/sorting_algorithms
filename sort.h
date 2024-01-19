@@ -16,14 +16,11 @@ typedef struct listint_s
 	struct listint_s *next;
 } listint_t;
 
-<<<<<<< HEAD
 
-=======
 void bubble_sort(int *array, size_t size);
 void swap_fun(int *num_1, int *num_2);
 void print_array(const int *array, size_t size);
 void print_list(const listint_t *list);
->>>>>>> d7b6539ded86db60c4d5f6be167c0d6d4251f42f
 listint_t *swap_node(listint_t *node, listint_t **list);
 void insertion_sort_list(listint_t **list);
 void print_array(const int *array, size_t size);
