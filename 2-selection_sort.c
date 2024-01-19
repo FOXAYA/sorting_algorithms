@@ -11,20 +11,25 @@ void swap_fun(int *num_1, int *num_2)
 	*num_1 = *num_2;
 	*num_2 = temp;
 }
+
 /**
 * find_min - Function to find the index of the minimum element in an array
 * @array: The array
 * @n: The size of the array
 * Return: The index of the minimum element
 */
-int find_min(int array[], size_t  n) {
-   size_t minIndex = n;
-   size_t i;
-   for(i = 0; i < n; i++) {
-       if (array[i] < array[minIndex])
-           minIndex = i;
-   }
-   return minIndex;
+
+int find_min(int array[], size_t  n)
+{
+	size_t minIndex = 0;
+	size_t i;
+
+	for (i = 1; i < n; i++)
+	{
+		if (array[i] < array[minIndex])
+			minIndex = i;
+	}
+	return (minIndex);
 }
 
 /**
@@ -34,14 +39,12 @@ int find_min(int array[], size_t  n) {
 */
 void selection_sort(int *array, size_t size)
 {
-    size_t i;
-    for (i = 0; i < size - 1; i++)
-    {
-       int minIndex = find_min(array + 1 , size - 1);
-       swap_fun(&array[i], &array[minIndex]);
-       print_array(array, size);
+	size_t i;
 
-     
-    }
+	for (i = 0; i < size - 1; i++)
+	{
+		int minIndex = find_min(array + 1, size - i) + i;
+
+		swap_fun(&array[i], &array[minIndex]);
+		print_array(array, size);
 }
-
