@@ -1,10 +1,4 @@
-# Time Complexity Analysis
-
 O(n)
-# - Linear Time Complexity
-
- O(n^2)
-# - Quadratic Time Complexity
-
 O(n^2)
-# - Another Quadratic Time Complexity
+O(n^2)
+
