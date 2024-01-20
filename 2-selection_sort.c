@@ -12,7 +12,6 @@ void swap_fun(int *num_1, int *num_2)
 	*num_2 = temp;
 }
 /**
-<<<<<<< HEAD
 * find_Max - Function to find the index of the maximum element in an array
 * @array: The array
 * @n: The size of the array
@@ -32,8 +31,6 @@ int find_Max(int array[], size_t n)
 }
 
 /**
-=======
->>>>>>> d3d37ab925540426323df7cdb3d7f601a3599b39
 * selection_sort - Function Sorts an array of numbers using selection sort
 * @array : The array will sorted
 * @size : The numbers of elements in @array
@@ -42,7 +39,7 @@ int find_Max(int array[], size_t n)
 
 void selection_sort(int *array, size_t size)
 {
-<<<<<<< HEAD
+
 	size_t i;
 
 	for (i = 0; i < size - 1; i++)
@@ -52,8 +49,6 @@ void selection_sort(int *array, size_t size)
 	swap_fun(&array[i + maxIndex], &array[i]);
 	print_array(array, size);
 
-
-=======
 	size_t i, j, minIndex;
 
 	for (i = 0; i < size - 1; i++)
@@ -71,6 +66,5 @@ void selection_sort(int *array, size_t size)
 			swap_fun(&array[i], &array[minIndex]);
 			print_array(array, size);
 		}
->>>>>>> d3d37ab925540426323df7cdb3d7f601a3599b39
 	}
 }
