@@ -30,4 +30,7 @@ int lomutoPartition(int *array, int start, int end, size_t size);
 void quickSort(int *array, int start, int end, size_t size);
 void quick_sort(int *array, size_t size);
 void shell_sort(int *array, size_t size);
+void cocktail_sort_list(listint_t **list);
+void swappingAdjacentNode(listint_t **list, listint_t *firstNode, listint_t *secondNode);
+
 #endif
