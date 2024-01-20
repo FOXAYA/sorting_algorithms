@@ -7,9 +7,9 @@
 */
 void swap_fun(int *num_1, int *num_2)
 {
-	int temp = *num_1;
-	*num_1 = *num_2;
-	*num_2 = temp;
+        int temp = *num_1;
+        *num_1 = *num_2;
+        *num_2 = temp;
 }
 /**
 * find_Max - Function to find the index of the maximum element in an array
@@ -19,15 +19,15 @@ void swap_fun(int *num_1, int *num_2)
 */
 int find_Max(int array[], size_t n)
 {
-	size_t maxIndex = n;
-	size_t i;
+        size_t maxIndex = n;
+        size_t i;
 
-	for (i = 0; i < n; i++)
-	{
-	if (array[i] > array[maxIndex])
-	maxIndex = i;
-	}
-	return (maxIndex);
+        for (i = 0; i < n; i++)
+        {
+        if (array[i] > array[maxIndex])
+        maxIndex = i;
+        }
+        return (maxIndex);
 }
 
 /**
@@ -40,31 +40,30 @@ int find_Max(int array[], size_t n)
 void selection_sort(int *array, size_t size)
 {
 
-	size_t i;
+         size_t i, j, minIndex;
 
-	for (i = 0; i < size - 1; i++)
-	{
+        for (i = 0; i < size - 1; i++)
+        {
 
-		int maxIndex = find_Max(array + 1, size - 1);
-	swap_fun(&array[i + maxIndex], &array[i]);
-	print_array(array, size);
+                int maxIndex = find_Max(array + 1, size - 1);
+        swap_fun(&array[i + maxIndex], &array[i]);
+        print_array(array, size);
 
-	size_t i, j, minIndex;
-
-	for (i = 0; i < size - 1; i++)
-	{
-		minIndex = i;
-		for (j = i + 1; j < size; j++)
-		{
-			if (array[j] < array[minIndex])
-			{
-				minIndex = j;
-			}
-		}
-		if (minIndex != i)
-		{
-			swap_fun(&array[i], &array[minIndex]);
-			print_array(array, size);
-		}
-	}
+        for (i = 0; i < size - 1; i++)
+        {
+                minIndex = i;
+                for (j = i + 1; j < size; j++)
+                {
+                        if (array[j] < array[minIndex])
+                        {
+                                minIndex = j;
+                        }
+                }
+                if (minIndex != i)
+                {
+                        swap_fun(&array[i], &array[minIndex]);
+                        print_array(array, size);
+                }
+        }
+}
 }
