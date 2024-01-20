@@ -11,33 +11,33 @@
  */
 int lomutoPartition(int *array, int start, int end, size_t size)
 {
-    int index_i, index_j, pivot_element, temporary;
+	int index_i, index_j, pivot_element, temporary;
 
-    pivot_element = array[end];
-    index_i = start - 1;
-    index_j = start;
+	pivot_element = array[end];
+	index_i = start - 1;
+	index_j = start;
 
-    while (index_j <= end - 1)
-    {
-        if (array[index_j] <= pivot_element)
-        {
-            index_i++;
-            temporary = array[index_i];
-            array[index_i] = array[index_j];
-            array[index_j] = temporary;
-            if (array[index_i] != array[index_j])
-                print_array(array, size);
-        }
-        index_j++;
-    }
+	while (index_j <= end - 1)
+	{
+	if (array[index_j] <= pivot_element)
+	{
+	index_i++;
+	temporary = array[index_i];
+	array[index_i] = array[index_j];
+	array[index_j] = temporary;
+	if (array[index_i] != array[index_j])
+	print_array(array, size);
+	}
+	index_j++;
+	}
 
-    temporary = array[index_i + 1];
-    array[index_i + 1] = array[end];
-    array[end] = temporary;
-    if (array[index_i + 1] != array[end])
-        print_array(array, size);
+	temporary = array[index_i + 1];
+	array[index_i + 1] = array[end];
+	array[end] = temporary;
+	if (array[index_i + 1] != array[end])
+	print_array(array, size);
 
-    return (index_i + 1);
+	return (index_i + 1);
 }
 /**
  * quickSort - recursively sorts array of integers by separating into two
@@ -49,14 +49,14 @@ int lomutoPartition(int *array, int start, int end, size_t size)
  */
 void quickSort(int *array, int start, int end, size_t size)
 {
-    int pivot;
+	int pivot;
 
-    if (start < end)
-    {
-        pivot = lomutoPartition(array, start, end, size);
-        quickSort(array, start, pivot - 1, size);
-        quickSort(array, pivot + 1, end, size);
-    }
+	if (start < end)
+	{
+	pivot = lomutoPartition(array, start, end, size);
+	quickSort(array, start, pivot - 1, size);
+	quickSort(array, pivot + 1, end, size);
+	}
 }
 
 
@@ -69,11 +69,11 @@ void quickSort(int *array, int start, int end, size_t size)
 
 void quick_sort(int *array, size_t size)
 {
-    if (array == NULL)
-        return;
+	if (array == NULL)
+	return;
 
-    if (size < 2)
-        return;
+	if (size < 2)
+	return;
 
-    quickSort(array, 0, (int)size - 1, size);
+	quickSort(array, 0, (int)size - 1, size);
 }
