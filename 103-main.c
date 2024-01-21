@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "sort.h"
-#include <sys/types.h>
+
 /**
  * main - Entry point
  *
