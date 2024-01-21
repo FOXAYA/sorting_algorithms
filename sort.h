@@ -35,11 +35,11 @@ void swappingAdjacentNode(listint_t **list, listint_t *firstNode,
 		listint_t *secondNode);
 void counting_sort(int *array, size_t size);
 void pRint_Array(int *array, int start_index, int end_index);
-void customCopyFunction(int *found, int start_index, int end_index, 
+void customCopyFunction(int *found, int start_index, int end_index,
 		int *destination);
-void mergeArrays(int *found, int start_index, int middle_index, 
+void mergeArrays(int *found, int start_index, int middle_index,
 		int end_index, int *destination);
-void mergeSortRecursive(int *found , int start_index, 
+void mergeSortRecursive(int *found, int start_index,
 		int end_index, int *destination);
 void merge_sort(int *array, size_t size);
 #endif
