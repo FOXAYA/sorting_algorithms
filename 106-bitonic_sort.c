@@ -59,30 +59,22 @@ void cUStOMmERge(bool ascending, int *moon, size_t size, size_t fiNAlSize)
  */
 void meDhatDeif(bool ascending, int *moon, size_t size, size_t fiNAlSize)
 {
-	int *arr1, *arr2;
+	int *arr11, *arr22;
 
 	if (size <= 1)
 	return;
 
-	arr1 = moon;
-	arr2 = moon + (size / 2);
+	arr11 = moon;
+	arr22 = moon + (size / 2);
 	printf("Merging [%lu/%lu] (%s):\n", size, fiNAlSize,
-			(ascending ? "UP" : "DOWN"));
+	(ascending ? "UP" : "DOWN"));
 	print_array(moon, size);
-	if (ascending)
-	{
-	meDhatDeif(true, arr1, size / 2, fiNAlSize);
-	meDhatDeif(false, arr2, size / 2, fiNAlSize);
-	}
-	else
-	{
-	meDhatDeif(false, arr2, size / 2, fiNAlSize);
-	meDhatDeif(true, arr1, size / 2, fiNAlSize);
-	}
-	cUStOMmERge(ascending, arr1, size, fiNAlSize);
 
+	meDhatDeif(true, arr11, size / 2, fiNAlSize);
+	meDhatDeif(false, arr22, size / 2, fiNAlSize);
+	cUStOMmERge(ascending, arr11, size, fiNAlSize);
 	printf("Result [%lu/%lu] (%s):\n", size, fiNAlSize,
-			(ascending ? "UP" : "DOWN"));
+	(ascending ? "UP" : "DOWN"));
 	print_array(moon, size);
 }
 
