@@ -34,10 +34,11 @@ void vert_to_H(int *array, size_t size)
 {
 	int begin = modifiedParent(size - 1);
 
-	do {
+	while (begin >= 0)
+	{
 	heapify_Do_win(array, size, begin, size - 1);
 	begin--;
-	} while (begin >= 0);
+	}
 }
 
 /**
@@ -54,7 +55,8 @@ void heapify_Do_win(int *array, size_t size, int begin, int finish)
 
 	origin = begin;
 
-	do {
+	while (adjustedLeftChild(origin) <= finish)
+	{
 	offspring = adjustedLeftChild(origin);
 	exchange = origin;
 
@@ -72,10 +74,12 @@ void heapify_Do_win(int *array, size_t size, int begin, int finish)
 	origin = exchange;
 	}
 	else
+	{
 	return;
-
-	} while (adjustedLeftChild(origin) <= finish);
+	}
+	}
 }
+
 
 /**
  * heap_sort - SORT ARR of INTEGER in ascend ORD_er USINGaHEAPSORTED
@@ -92,15 +96,13 @@ void heap_sort(int *array, size_t size)
 
 	vert_to_H(array, size);
 
-	mood = (int)size - 1;
-	do {
+	for (mood = (int)size - 1; mood > 0; mood--)
+	{
 	placeholder = array[mood];
 	array[mood] = array[0];
 	array[0] = placeholder;
 	print_array(array, size);
-	mood--;
 
-	heapify_Do_win(array, size, 0, mood);
-
-	} while (mood > 0);
+	heapify_Do_win(array, size, 0, mood - 1);
+	}
 }
