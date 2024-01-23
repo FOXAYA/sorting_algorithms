@@ -42,4 +42,12 @@ void mergeArrays(int *found, int start_index, int middle_index,
 void mergeSortRecursive(int *found, int start_index,
 		int end_index, int *destination);
 void merge_sort(int *array, size_t size);
+int modifiedParent(int y);
+int adjustedLeftChild(int y);
+void vert_to_H(int *array, size_t size);
+void heapify_Do_win(int *array, size_t size, int begin, int finish);
+void heap_sort(int *array, size_t size);
+
+
+
 #endif
