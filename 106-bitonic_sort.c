@@ -38,25 +38,15 @@ void cUStOMmERge(bool ascending, int *moon, size_t size, size_t fiNAlSize)
 
 	if (size > 1)
 	{
+
 	arr1 = moon;
 	arr2 = moon + (size / 2);
-	if ((moon[0] > moon[size - 1]) == ascending)
-	{
 
-	int temporary = moon[0];
-
-	moon[0] = moon[size - 1];
-	moon[size - 1] = temporary;
-	cUStOMmERge(ascending, arr1, size / 2, fiNAlSize);
-	cUStOMmERge(ascending, arr2, size / 2, fiNAlSize);
-	}
-	else
-	{
+	biToNicComPare(ascending, moon, size);
 	cUStOMmERge(ascending, arr1, size / 2, fiNAlSize);
 	cUStOMmERge(ascending, arr2, size / 2, fiNAlSize);
 	}
 	}
-}
 
 
 /**
