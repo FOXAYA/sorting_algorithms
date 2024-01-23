@@ -11,26 +11,20 @@
  */
 void biToNicComPare(bool ascending, int *moon, size_t size)
 {
-	size_t distance = size / 2;
-	size_t index = 0;
+	size_t distance, index;
+	int temporary;
 
-	while (index < distance)
+	distance = size / 2;
+	for (index = 0; index < distance; index++)
 	{
 	if ((moon[index] > moon[index + distance]) == ascending)
 	{
-	int temporary = moon[index];
-
+	temporary = moon[index];
 	moon[index] = moon[index + distance];
 	moon[index + distance] = temporary;
-	index = 0;
-	}
-	else
-	{
-	index++;
 	}
 	}
-}
-
+	}
 /**
  * cUStOMmERge - SECOND RECurSive FUN OF Bitonicsorting, SORTS SUBarrAys
  * @ascending: IF TRUE (as0000cending_order)/ false(dESSCENDING)2030
