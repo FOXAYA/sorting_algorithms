@@ -3,6 +3,7 @@
 #include <sys/types.h>
 #include <stdlib.h>
 #include<stdio.h>
+#include <stdbool.h>
 /**
  * struct listint_s - Doubly linked list node
  *
@@ -47,6 +48,10 @@ int adjustedLeftChild(int y);
 void vert_to_H(int *array, size_t size);
 void heapify_Do_win(int *array, size_t size, int begin, int finish);
 void heap_sort(int *array, size_t size);
+void bitonic_sort(int *array, size_t size);
+void meDhatDeif(bool ascending, int *moon, size_t size, size_t fiNAlSize);
+void cUStOMmERge(bool ascending, int *moon, size_t size, size_t fiNAlSize);
+void biToNicComPare(bool ascending, int *moon, size_t size);
 
 
 
