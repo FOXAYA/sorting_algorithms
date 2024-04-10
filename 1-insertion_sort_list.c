@@ -29,6 +29,8 @@ node = node->next;
  */
 listint_t *swap_node(listint_t *node, listint_t **list)
 {
+	bool flag = false;
+	listint_t *tmp = NULL, *aux = NULL;
 listint_t *back = node->prev, *current = node;
 /*NULL, 19, 48, 9, 71, 13, NULL*/
 
